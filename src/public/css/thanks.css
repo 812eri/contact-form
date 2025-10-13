@@ -1,0 +1,94 @@
+body {
+    color: #8b7969;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.thanks__wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.thanks-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 280px;
+    font-weight: 300;
+    color: #8b79690d;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    line-height: 1;
+    font-family: "Inika", serif;
+}
+
+.thanks__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.thanks__heading {
+    margin-bottom: 40px;
+}
+
+.thanks__heading p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b7969;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.home__button {
+    display: inline-block;
+    font-family: "Inika", serif;
+    background-color: #82756a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 40px;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.home__button:hover {
+    background-color: #6b5540;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+    .thanks-bg {
+        font-size: 60px;
+    }
+
+    .thanks__heading p {
+        font-size: 18px;
+    }
+
+    .home__button {
+        padding: 10px 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .thanks-bg {
+        font-size: 40px;
+    }
+
+    .thanks__heading p {
+        font-size: 16px;
+    }
+}

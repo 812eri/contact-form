@@ -1,0 +1,478 @@
+/* 透明感の調整必要 */
+
+/* ===== ベース設定 ===== */
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #8b7969;
+}
+/* ヘッダー */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e0dfde;
+}
+
+.header__inner {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__inner h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Inika', serif;
+    color: #8b7969;
+}
+
+.logout__button {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    padding: 5px 24px;
+    background: transparent;
+    border: 1px solid #d9c6b5;
+    border-radius: 1px;
+    color: #d9c6b5;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Inika', serif;
+}
+
+.logout__button:hover {
+    background: #f9f9f9;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.admin-form__content {
+    width: 100%;
+}
+
+.admin-form__heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin-form__heading h2 {
+    font-family: "Inika", serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    color: #8b7969;
+}
+
+/* 削除成功メッセージ */
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 1px;
+    border: 1px solid #c3e6cb;
+    font-size: 14px;
+}
+
+/* 検索フォーム */
+.search-form {
+    background: transparent;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.search-form__row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px 15px;
+    border: 1px solid #d9c6b5;
+    border-radius: 1px;
+    font-size: 14px;
+    background: #f4f4f4;
+}
+
+.search-input::placeholder {
+    color: #beb1a6;
+}
+
+.search-select {
+    padding: 10px 15px;
+    border: 1px solid #d9c6b5;
+    border-radius: 1px;
+    font-size: 14px;
+    background: #f4f4f4;
+    min-width: 150px;
+    color: #8b7969;
+}
+
+.search-button {
+    padding: 10px 24px;
+    background: #8b7969;
+    color: #ffffff;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.reset-button {
+    padding: 10px 30px;
+    background: #d9c6b5;
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.search-button:hover {
+    background: #6b5540;
+}
+
+.reset-button {
+    padding: 10px 24px;
+    background: #d9c6b5;
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.reset-button:hover {
+    background: #c9b6a5;
+}
+
+/* ===== ページネーション ===== */
+.pagination {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination a,
+.pagination span {
+    font-family: "Inika", serif;
+    display: block;
+    padding: 4px 10px;
+    color: #8b7969;
+    text-decoration: none;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    font-size: 16px;
+    margin-left: -1px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.pagination li:first-child a,
+.pagination li:first-child span {
+    margin-left: 0;
+    /* 追加：最初の要素はmarginなし */
+}
+
+.pagination .active span {
+    background: #82756a;
+    color: #ffffff;
+    border-color: #82756a;
+    position: relative;
+    z-index: 1;
+}
+
+.pagination a:hover {
+    background: #f5f5f5;
+    position: relative;
+    z-index: 1;
+}
+
+.pagination .disabled span {
+    color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/* エクスポート */
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* エクスポートボタン */
+.export-button {
+    padding: 8px 20px;
+    background: rgba(225, 219, 214, 0.6);
+    border: none;
+    border-radius: 1px;
+    color: #8b7969;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.export-button:hover {
+    background: rgba(225, 219, 214, 0.8);
+    /* ホバー時は80% */
+}
+
+/* テーブル */
+.admin-table {
+    border-radius: 1px;
+    overflow: hidden;
+    border: 1px solid #e0dfde;
+}
+
+.admin-table__inner {
+    background: #ffffff;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.admin-table__inner th:nth-child(1),
+.admin-table__inner td:nth-child(1) {
+    width: 15%;
+    /* お名前 */
+}
+
+.admin-table__inner th:nth-child(2),
+.admin-table__inner td:nth-child(2) {
+    width: 10%;
+    /* 性別 */
+}
+
+.admin-table__inner th:nth-child(3),
+.admin-table__inner td:nth-child(3) {
+    width: 25%;
+    /* メールアドレス */
+}
+
+.admin-table__inner th:nth-child(4),
+.admin-table__inner td:nth-child(4) {
+    width: 35%;
+    /* お問い合わせの種類 */
+}
+
+.admin-table__inner th:nth-child(5),
+.admin-table__inner td:nth-child(5) {
+    width: 15%;
+    /* 詳細ボタン */
+    text-align: center;
+}
+
+.admin-table__inner thead {
+    background: #8b7969;
+}
+
+.admin-table__inner th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.admin-table__inner td {
+    padding: 15px;
+    border-bottom: 1px solid #e0dfde;
+    font-size: 14px;
+    color: #8b7969;
+}
+
+.admin-table__inner tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.no-data {
+    text-align: center;
+    color: #ff9494;
+    padding: 40px 15px !important;
+}
+
+/* 詳細ボタン */
+.detail-button {
+    padding: 6px 16px;
+    background: transparent;
+    border: 1px solid #d9c6b5;
+    border-radius: 1px;
+    color: #d9c6b5;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.detail-button:hover {
+    background: #f9f9f9;
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+    min-height: 500px;
+    border-radius: 1px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #8b7969;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #8b7969;
+    cursor: pointer;
+    line-height: 1;
+    background: transparent;
+    padding: 0;
+}
+
+.modal-close:hover {
+    color: #6b5540;
+}
+
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 60px auto;
+}
+
+.modal-table tr:first-child th {
+    border-top: none;
+}
+
+.modal-table th {
+    padding: 15px 30px;
+    text-align: left;
+    font-weight: bold;
+    width: 180px;
+    vertical-align: middle;
+    color: #8b7969;
+    font-size: 12px;
+}
+
+.modal-table td {
+    padding: 15px 30px;
+    word-break: break-all;
+    white-space: nowrap;
+    color: #8b7969;
+    font-size: 12px;
+}
+
+/* お問い合わせ内容のみ折り返しOK */
+.modal-table tr:last-child td {
+    word-break: break-word;  /* 折り返しOK */
+    white-space: normal;  /* 折り返しOK */
+    padding-bottom: 30px;
+}
+
+.modal-table tr:first-child th,
+.modal-table tr:first-child td {
+    padding-top: 30px;
+}
+
+.modal-table tr:last-child th,
+.modal-table tr:last-child td {
+    padding-bottom: 30px;
+}
+
+/* 削除ボタン */
+.delete-button {
+    display: inline-block;
+    width: 70px;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background: #ba370d;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 1px;
+}
+
+.delete-button:hover {
+    background: #9a2d0a;
+}
+
+/* 削除ボタンのフォームの余白調整 */
+#deleteForm {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* 下に余白 */
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+    .header__inner h1 {
+        font-size: 24px;
+    }
+
+    .search-form__row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input,
+    .search-select,
+    .search-button,
+    .reset-button {
+        width: 100%;
+    }
+
+    .admin-table__inner {
+        font-size: 12px;
+    }
+
+    .admin-table__inner th,
+    .admin-table__inner td {
+        padding: 10px 8px;
+    }
+}
