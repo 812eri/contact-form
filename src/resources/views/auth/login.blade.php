@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン - FashionablyLate</title>
+@extends('layouts.app')
 
-    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
-</head>
-<body>
+@section('title', 'ログイン - FashionablyLate')
+
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+@endsection
+
+@section('header')
     <header class="auth-header">
         <div class="auth-header__inner">
             <h1>FashionablyLate</h1>
             <a href="{{ route('register') }}" class="auth-header__button">register</a>
         </div>
     </header>
+@endsection
 
+@section('content')
     <main class="auth-main">
         <h2 class="auth-title">Login</h2>
 
@@ -45,5 +43,4 @@
             </form>
         </div>
     </main>
-</body>
-</html>
+@endsection

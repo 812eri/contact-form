@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理画面 - FashionablyLate</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+@extends('layouts.app')
 
-</head>
-<body>
+@section('title', '管理画面 - FashionablyLate')
+
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+@endsection
+
+@section('header')
     <header class="header">
         <div class="header__inner">
             <h1>FashionablyLate</h1>
@@ -20,8 +16,9 @@
             </form>
         </div>
     </header>
+@endsection
 
-    <main>
+@section('content')
         <div class="admin-form__content">
             <div class="admin-form__heading">
                 <h2>Admin</h2>
@@ -105,7 +102,7 @@
             </table>
         </div>
         </div>
-    </main>
+@endsection
 
     <div id="detailModal" class="modal">
         <div class="modal-content">
@@ -154,6 +151,7 @@
         </div>
     </div>
 
+    @section('scripts')
     <script>
         const modal = document.getElementById('detailModal');
         const closeBtn = document.querySelector('.modal-close');
@@ -186,5 +184,4 @@
             }
         }
     </script>
-</body>
-</html>
+@endsection

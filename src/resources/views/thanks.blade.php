@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 送信完了- FashionablyLate</title>
+@extends('layouts.app')
 
-    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
-</head>
-<body>
+@section('title', '送信完了- FashionablyLate')
+
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
+@endsection
+
+@section('content')
     <div class="thanks__wrap">
         <div class="thanks-bg" aria-hidden="true">Thank you</div>
         <div class="thanks__content">
@@ -20,5 +16,4 @@
             <a href="/" class="home__button">HOME</a>
         </div>
     </div>
-</body>
-</html>
+@endsection

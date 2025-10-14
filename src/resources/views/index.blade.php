@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ - FashionablyLate</title>
+@extends('layouts.app')
 
-    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+@section('title', 'お問い合わせ - FashionablyLate')
+
+@section('styles')
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-</head>
-<body>
+@endsection
+
+@section('header')
     <header class="header">
         <div class="header__inner">
             <a class="header__logo" href="/">
@@ -18,8 +14,9 @@
             </a>
         </div>
     </header>
+@endsection
 
-    <main>
+@section('content')
         <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>Contact</h2>
@@ -190,8 +187,9 @@
                 </div>
             </form>
         </div>
-    </main>
+@endsection
 
+@section('scripts')
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const select = document.querySelector('select[name="category_id"]');
@@ -211,5 +209,4 @@
         }
     });
     </script>
-</body>
-</html>
+@endsection

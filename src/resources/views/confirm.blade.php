@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>確認画面 - FashionablyLate</title>
+@extends('layouts.app')
 
-    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+@section('title', '確認画面 - FashionablyLate')
+
+@section('styles')
     <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
-</head>
-<body>
+@endsection
+
+@section('header')
     <header class="header">
         <div class="header__inner">
             <a class="header__logo" href="/">
@@ -18,8 +14,9 @@
             </a>
         </div>
     </header>
+@endsection
 
-    <main>
+@section('content')
         <div class="confirm__content">
             <div class="confirm__heading">
                 <h2>Confirm</h2>
@@ -94,11 +91,10 @@
                     <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}"/>
                     <input type="hidden" name="detail" value="{{ $contact['detail'] }}"/>
 
-                <div class="form__button">
-                    <button class="form__button-submit" type="submit">送信</button>
-                    <button class="form__button-edit" type="submit" formaction="/" formmethod="post">修正</button>
-                </div>
-            </form>
-    </main>
-</body>
-</html>
+                    <div class="form__button">
+                        <button class="form__button-submit" type="submit">送信</button>
+                        <button class="form__button-edit" type="submit" formaction="/" formmethod="post">修正</button>
+                    </div>
+                </form>
+        </div>
+@endsection
