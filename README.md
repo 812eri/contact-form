@@ -26,7 +26,7 @@
 
 ## ER 図
 
-![ER図](er_diagram.png)
+![ER図](ContactForm_diagram.png)
 
 ## URL
 
