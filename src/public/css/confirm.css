@@ -21,7 +21,7 @@ body {
 .header__logo {
     font-family: "Inika", serif;
     color: #8b7969;
-    font-size: 32px;
+    font-size: 40px;
     text-decoration: none;
 }
 
@@ -32,10 +32,10 @@ body {
     max-width: 700px;
 }
 
-.confirm__heading {
+.confirm__heading h1 {
     font-family: "Inika", serif;
     text-align: center;
-    font-size: 22px;
+    font-size: 35px;
     font-weight: normal;
     margin-bottom: 30px;
 }

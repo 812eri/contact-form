@@ -20,7 +20,7 @@
         <h2 class="auth-title">Register</h2>
 
         <div class="auth-container">
-            <form class="auth-form" method="post"  action="{{ route('register') }}">
+            <form class="auth-form" method="post"  action="{{ route('register') }}" novalidate>
                 @csrf
 
                 <div class="form-group">

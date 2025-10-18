@@ -28,7 +28,7 @@ class ContactRequest extends FormRequest
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'gender' => 'required|in:1,2,3',
-            'email' => 'required|email|max:255',
+            'email' => 'required|string|email|max:255',
             'tel1' => 'required|numeric|digits_between:1,5',
             'tel2' => 'required|numeric|digits_between:1,4',
             'tel3' => 'required|numeric|digits:4',
